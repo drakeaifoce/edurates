@@ -1,11 +1,15 @@
+import { Routes, Route } from "react-router-dom"
+import { routes } from "./routes"
+
 function App() {
 
   return (
-    <div className="App">
-      <h1 class="text-5xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+      <Routes>
+        {
+          routes.map(({path, Component}) =>
+            <Route key={path} path={path} element={<Component/>} exact/>
+          )}
+      </Routes>
   )
 }
 

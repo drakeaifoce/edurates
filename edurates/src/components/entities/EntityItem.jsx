@@ -1,6 +1,6 @@
 
-export default function EntityItem() {
+export function EntityItem({ entity }) {
   return (
-    <div>EntityItem</div>
+    <div>{entity.name}</div>
   )
 }
