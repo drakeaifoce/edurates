@@ -25,9 +25,13 @@ export function EntityList() {
 
   return (
     <div>
-      { data?.map((entity) => (
-        <EntityItem key={entity.id} entity={entity} />
-      ))}
+      {data ? 
+          data.map((entity) => (
+            <EntityItem key={entity.id} entity={entity} />
+          ))
+        :
+          <p>No data was found</p> 
+      }
     </div>
   )
 }

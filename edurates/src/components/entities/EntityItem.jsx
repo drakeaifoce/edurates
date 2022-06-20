@@ -1,6 +1,8 @@
 
 export function EntityItem({ entity }) {
   return (
-    <div>{entity.name}</div>
+    <div>
+      {entity.name}
+    </div>
   )
 }
